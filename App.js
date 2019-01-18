@@ -8,12 +8,12 @@
 
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-
+import Catagories from "./src/components/catagories";
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>TEA MAN</Text>
+        <Catagories />
       </View>
     );
   }
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#E5E4E2"
   },
   welcome: {
     fontSize: 20,
