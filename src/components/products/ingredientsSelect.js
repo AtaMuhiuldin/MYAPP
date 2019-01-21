@@ -5,7 +5,7 @@ class IngredientsSelect extends React.Component {
   render() {
     return (
       <View>
-        <View style={Styles.row1Catagory}>
+        <View>
           <Text>Enter Name of Catagory</Text>
           <TextInput
             placeholder={"Ex : Tea "}
@@ -14,7 +14,7 @@ class IngredientsSelect extends React.Component {
           />
         </View>
 
-        <View style={Styles.row1Ingredients}>
+        <View>
           <View>
             <View>
               <Text>Ingredients:</Text>

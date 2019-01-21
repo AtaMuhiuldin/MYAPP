@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Switch, TextInput } from "react-native";
-import { PRIMARY_COLOR } from "../themes/colors";
+import { PRIMARY_COLOR } from "../../themes/colors";
 import Add from "./add";
 import IngredientsSelect from "./ingredientsSelect";
 
