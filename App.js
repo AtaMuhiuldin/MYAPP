@@ -8,13 +8,13 @@
 
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Catagories from "./src/components/catagories";
-import AddCatagory from "./src/components/addCatagory";
+import Catagories from "./src/components/products/catagories";
+
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <AddCatagory />
+        <Catagories />
       </View>
     );
   }

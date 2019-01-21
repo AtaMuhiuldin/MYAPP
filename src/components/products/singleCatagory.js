@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
-import { BORDER_COLOR, PRIMARY_COLOR } from "../themes/colors";
+import { BORDER_COLOR, PRIMARY_COLOR } from "../../themes/colors";
 
 class SingleCatagory extends React.Component {
   render() {
@@ -15,9 +15,7 @@ class SingleCatagory extends React.Component {
             />
           </View>
           <View style={Styles.title}>
-            <Text style={Styles.titleText}>
-              {catagory.key}
-            </Text>
+            <Text style={Styles.titleText}>{catagory.key}</Text>
           </View>
         </View>
       </View>

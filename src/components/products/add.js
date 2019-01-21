@@ -4,16 +4,14 @@ import {
   SECONDRY_COLOR,
   BORDER_COLOR,
   ACTIVITY_BACKGROUND
-} from "../themes/colors";
+} from "../../themes/colors";
 class Add extends React.Component {
   render() {
     const { text } = this.props;
     return (
       <TouchableOpacity style={this.props.style} onPress={() => 1 + 1}>
         <View style={Styles.container}>
-          <Text style={Styles.textStyle}>
-            {text ? text : "Add"}
-          </Text>
+          <Text style={Styles.textStyle}>{text ? text : "Add"}</Text>
           <View style={Styles.iconContainerStyle}>
             <Text style={Styles.iconStyle}>+</Text>
           </View>
