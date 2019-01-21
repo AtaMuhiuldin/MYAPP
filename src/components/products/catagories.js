@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import SingleCatagory from "./singleCatagory";
 import { ACTIVITY_BACKGROUND } from "../themes/colors";
+import Add from "./add";
 
 class Catagories extends React.Component {
   state = {
@@ -26,6 +27,7 @@ class Catagories extends React.Component {
             <SingleCatagory _id={item.id} catagory={item} />}
           numColumns={2}
         />
+        <Add text={"Add Catagory"} style={Styles.btbAddStyle} />
       </View>
     );
   }
@@ -37,5 +39,9 @@ const Styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: ACTIVITY_BACKGROUND
+  },
+  btnAddStyle: {
+    height: 180,
+    flex: 1
   }
 });
