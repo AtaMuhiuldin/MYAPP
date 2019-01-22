@@ -15,7 +15,9 @@ class SingleCatagory extends React.Component {
             />
           </View>
           <View style={Styles.title}>
-            <Text style={Styles.titleText}>{catagory.key}</Text>
+            <Text style={Styles.titleText}>
+              {catagory.key}
+            </Text>
           </View>
         </View>
       </View>

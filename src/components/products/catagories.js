@@ -23,9 +23,8 @@ class Catagories extends React.Component {
         <FlatList
           style={Styles.container}
           data={this.state.catagories}
-          renderItem={({ item }) => (
-            <SingleCatagory _id={item.id} catagory={item} />
-          )}
+          renderItem={({ item }) =>
+            <SingleCatagory _id={item.id} catagory={item} />}
           numColumns={2}
         />
         <Add text={"Add Catagory"} style={Styles.btbAddStyle} />
