@@ -1,43 +1,82 @@
 import React from "react";
-import { Text, View, TextInput } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { PRIMARY_COLOR, ACTIVITY_BACKGROUND } from "../../themes/colors";
+import { Switch } from "react-native";
+import {
+  Container,
+  Header,
+  Footer,
+  Content,
+  Text,
+  Button,
+  Item,
+  Icon,
+  Input
+} from "native-base";
 
 class IngredientsSelect extends React.Component {
+  state = {};
+
   render() {
     return (
-      <View>
-        <View>
-          <Text>Enter Name of Catagory</Text>
-          <TextInput
-            placeholder={"Ex : Tea "}
-            value={this.state.catagoryName}
-            onChangeText={text => this.setState({ catagoryName: text })}
-          />
-        </View>
-
-        <View>
-          <View>
-            <View>
-              <Text>Ingredients:</Text>
-              <Text>5</Text>
-            </View>
-            <View>
-              <View>
-                <TextInput
-                  placeholder={"Ex : Sugar "}
-                  value={this.state.ingredientName}
-                  onChangeText={text => this.setState({ ingredientName: text })}
-                />
-              </View>
-              <View>
-                <View>
-                  <Text>Ingredient it is </Text>
-                </View>
-              </View>
-            </View>
+      <Container>
+        <Header style={Styles.header}>
+          <View style={Styles.headerComponent}>
+            <Text style={Styles.txtHeader}>Ingredients</Text>
+            <Switch value={false} style={Styles.switchHeader} />
           </View>
-        </View>
-      </View>
+        </Header>
+
+        <Content>
+          <Item>
+            <Icon name="search" />
+            <Input placeholder="Search Ingridients" />
+          </Item>
+          <Text>Contents here </Text>
+        </Content>
+
+        <Footer style={Styles.footer}>
+          <Button block iconLeft style={Styles.btnFinish}>
+            <Icon name="home" style={{ color: PRIMARY_COLOR }} />
+            <Text style={Styles.btnFinishText}>Finish</Text>
+          </Button>
+        </Footer>
+      </Container>
     );
   }
 }
 export default IngredientsSelect;
+
+const Styles = StyleSheet.create({
+  header: {
+    backgroundColor: ACTIVITY_BACKGROUND
+  },
+  headerComponent: {
+    flex: 1
+  },
+  txtHeader: {
+    flex: 5
+  },
+  switchHeader: {
+    flex: 2
+  },
+  footer: {
+    backgroundColor: "transparent",
+    height: 80
+  },
+  btnFinish: {
+    backgroundColor: ACTIVITY_BACKGROUND,
+
+    marginRight: 20,
+    marginLeft: 20,
+    marginBottom: 20,
+    borderRadius: 30,
+    paddingLeft: 30,
+    paddingRight: 30,
+    height: 60
+  },
+  btnFinishText: {
+    color: PRIMARY_COLOR,
+    fontSize: 30
+  }
+});
