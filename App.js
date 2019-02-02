@@ -8,15 +8,15 @@
 
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-
+import SelectIngredients from './src/components/products/ingredientsSelect';
 import AppContainer from "./src/navigations/navigation";
-import IngredientsSelect from "./src/components/products/ingredientsSelect";
 
+import ProductList from './src/components/products/productsList';
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <IngredientsSelect />
+        <AppContainer />
       </View>
     );
   }

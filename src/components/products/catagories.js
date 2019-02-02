@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
+import { Container, Content, Footer } from 'native-base';
 import SingleCatagory from "./singleCatagory";
 import { ACTIVITY_BACKGROUND } from "../../themes/colors";
 import Add from "./add";
+import SimpleHeader from "../headers/simpleHeader";
 
 class Catagories extends React.Component {
   state = {
@@ -19,16 +21,23 @@ class Catagories extends React.Component {
 
   render() {
     return (
-      <View style={Styles.container}>
-        <FlatList
-          style={Styles.container}
-          data={this.state.catagories}
-          renderItem={({ item }) =>
-            <SingleCatagory _id={item.id} catagory={item} />}
-          numColumns={2}
-        />
+      <Container style={Styles.container}>
+        <SimpleHeader />
+
+        <Content style={Styles.container} >
+          <FlatList
+            style={Styles.container}
+            data={this.state.catagories}
+            renderItem={({ item }) =>
+              <SingleCatagory _id={item.id} catagory={item} />}
+            numColumns={2}
+          />
+
+        </Content>
+
         <Add text={"Add Catagory"} style={Styles.btbAddStyle} />
-      </View>
+
+      </Container>
     );
   }
 }

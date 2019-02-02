@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Switch, TextInput } from "react-native";
 import { PRIMARY_COLOR } from "../../themes/colors";
 import Add from "./add";
 import IngredientsSelect from "./ingredientsSelect";
+import { Item, Label, Input } from "native-base";
 
 class AddCatagory extends React.Component {
   state = {
@@ -25,11 +26,14 @@ class AddCatagory extends React.Component {
             onValueChange={value => this.setState({ enableEditing: value })}
           />
         </View>
-
-        <View id={2} style={Styles.row1}>
-          <IngredientsSelect />
+        <View style={Styles.catagoryName}>
+          <Item >
+            <Input />
+          </Item>
         </View>
 
+
+        <IngredientsSelect id={2} style={Styles.row1} />
         <Add id={3} style={Styles.row2} text={"Finish"} />
       </View>
     );
@@ -58,8 +62,25 @@ const Styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start"
   },
+
+  catagoryName: {
+    height: 70,
+    backgroundColor: "white",
+    borderRadius: 30,
+    padding: 20,
+    marginTop: 20,
+    marginLeft: 30,
+    marginRight: 30,
+    marginBottom: 10
+  },
+
   row1: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "white",
+    borderRadius: 30,
+    padding: 20,
+    marginLeft: 30,
+    marginRight: 30
   },
   row1Catagory: {
     height: 100
